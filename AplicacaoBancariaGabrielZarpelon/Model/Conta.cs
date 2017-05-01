@@ -9,7 +9,7 @@ namespace AplicacaoBancariaGabrielZarpelon.Model
     class Conta
     {
         public string nome { get; set; }
-        public string nConta { get; set; }
+        public string numeroConta { get; set; }
         public double saldo { get; set; }
         public DateTime data { get; set; }
         public List<Movimentacao> Movimentacao { get; set; }
@@ -20,7 +20,7 @@ namespace AplicacaoBancariaGabrielZarpelon.Model
         }
         public override string ToString()
         {
-            return "Número de conta: " + nConta + "\nCliente: " + nome + "\nSaldo: " + saldo + "\nData de abertura: " + data;
+            return "Número de conta: " + numeroConta + "\nCliente: " + nome + "\nSaldo: " + saldo + "\nData de abertura: " + data;
         }
 
 

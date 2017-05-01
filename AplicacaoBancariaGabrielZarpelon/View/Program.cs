@@ -37,16 +37,16 @@ namespace AplicacaoBancariaGabrielZarpelon
                         Console.Clear();
                         Console.WriteLine(" -- Cadastrar Conta -- \n");
                         Console.WriteLine("Digite o número da conta: ");
-                        conta.nConta = Console.ReadLine();
+                        conta.numeroConta = Console.ReadLine();
                         Console.WriteLine("Digite o nome do cliente: ");
                         conta.nome = Console.ReadLine();
                         Console.WriteLine("Digite o valor inicial da conta: ");
-                        conta.saldo = Convert.ToInt64(Console.ReadLine());
+                        conta.saldo = Convert.ToDouble(Console.ReadLine());
 
                         if (ContaDAO.AddConta(conta) == true)
                         {
-                            Console.WriteLine("Conta cadastrada");
                             conta.data = DateTime.Now;
+                            Console.WriteLine("Conta cadastrada");
                         }
                         else
                         {
@@ -60,14 +60,14 @@ namespace AplicacaoBancariaGabrielZarpelon
 
                         Console.Clear();
                         Console.WriteLine("Digite o número de sua conta");
-                        conta.nConta = Console.ReadLine();
-                        conta = ContaDAO.BuscarContaNConta(conta);
+                        conta.numeroConta = Console.ReadLine();
+                        conta = ContaDAO.BuscarContaNumeroConta(conta);
                         movimentacao.tipo = "Depósito";
                         if (conta != null)
                         {
 
                             Console.WriteLine("Digite o valor do depósito");
-                            movimentacao.valor = Convert.ToInt64(Console.ReadLine());
+                            movimentacao.valor = Convert.ToDouble(Console.ReadLine());
                             if(movimentacao.valor > 0)
                             {
                                 movimentacao.data = DateTime.Now;
@@ -90,14 +90,14 @@ namespace AplicacaoBancariaGabrielZarpelon
                         movimentacao = new Movimentacao();
                         Console.Clear();
                         Console.WriteLine("Digite o número de sua conta");
-                        conta.nConta = Console.ReadLine();
-                        conta = ContaDAO.BuscarContaNConta(conta);
+                        conta.numeroConta = Console.ReadLine();
+                        conta = ContaDAO.BuscarContaNumeroConta(conta);
                         movimentacao.tipo = "Saque";
                         if (conta != null)
                         {
 
                             Console.WriteLine("Digite o valor do saque");
-                            movimentacao.valor = Convert.ToInt64(Console.ReadLine());
+                            movimentacao.valor = Convert.ToDouble(Console.ReadLine());
                             if (movimentacao.valor < conta.saldo)
                             {
                                 Console.WriteLine("Saque feito com sucesso");
@@ -120,8 +120,8 @@ namespace AplicacaoBancariaGabrielZarpelon
                         conta = new Conta();
                         Console.Clear();
                         Console.WriteLine("Digite o número da conta");
-                        conta.nConta = Console.ReadLine();
-                        conta = ContaDAO.BuscarContaNConta(conta);
+                        conta.numeroConta = Console.ReadLine();
+                        conta = ContaDAO.BuscarContaNumeroConta(conta);
                         if(conta != null)
                         {
                             Console.WriteLine(conta);

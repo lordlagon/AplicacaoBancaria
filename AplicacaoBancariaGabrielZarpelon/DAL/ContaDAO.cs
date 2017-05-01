@@ -11,27 +11,27 @@ namespace AplicacaoBancariaGabrielZarpelon.DAL
     {
         private static List<Conta> contas = new List<Conta>();
 
-        public static Conta BuscarContaNConta(Conta conta)
+        public static Conta BuscarContaNumeroConta(Conta conta)
         {
-            foreach (Conta contaCadas in contas)
+            foreach (Conta contaCadastrada in contas)
             {
-                if (conta.nConta.Equals(contaCadas.nConta))
+                if (conta.numeroConta.Equals(contaCadastrada.numeroConta))
                 {
-                    return contaCadas;
+                    return contaCadastrada;
                 }
             }
             return null;
         }
         public static bool AddConta (Conta conta)
         {
-            if (BuscarContaNConta(conta) != null)
+            if (BuscarContaNumeroConta(conta) != null)
             {
                 return false;
             }
             contas.Add(conta);
             return true;
         }
-        public static List<Conta> Lista()
+        public static List<Conta> RetornarLista()
         {
             return contas;
         }
