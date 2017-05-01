@@ -7,6 +7,7 @@ using AplicacaoBancariaGabrielZarpelon.DAL;
 using AplicacaoBancariaGabrielZarpelon.Model;
 using AplicacaoBancariaGabrielZarpelon.Controller;
 
+
 namespace AplicacaoBancariaGabrielZarpelon
 {
     class Program
