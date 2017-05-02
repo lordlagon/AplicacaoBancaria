@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AplicacaoBancariaGabrielZarpelon.Model;
+using AplicacaoBancariaGabrielZarpelon.Controller;
 
 namespace AplicacaoBancariaGabrielZarpelon.DAL
 {

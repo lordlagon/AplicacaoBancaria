@@ -35,6 +35,7 @@ namespace AplicacaoBancariaGabrielZarpelon
                 {
                     case "1":
                         conta = new Conta();
+                        movimentacao = new Movimentacao();
                         Console.Clear();
                         Console.WriteLine(" -- Cadastrar Conta -- \n");
                         Console.WriteLine("Digite o número da conta: ");
@@ -46,7 +47,12 @@ namespace AplicacaoBancariaGabrielZarpelon
 
                         if (ContaDAO.AddConta(conta) == true)
                         {
+                            movimentacao.tipo = "Saldo Inicial";
+                            movimentacao.data = DateTime.Now;
                             conta.data = DateTime.Now;
+                            movimentacao.valor = conta.saldo;
+                            conta.Movimentacao.Add(movimentacao);
+                            BancoDados.Cadastro(conta);
                             Console.WriteLine("Conta cadastrada");
                         }
                         else
