@@ -14,6 +14,7 @@ namespace AplicacaoBancariaGabrielZarpelon
     {
         static void Main(string[] args)
         {
+            BancoDados.CriacaoBaseDados();
             string opcao = null;
             Conta conta = new Conta();
             Movimentacao movimentacao = new Movimentacao();
@@ -52,7 +53,7 @@ namespace AplicacaoBancariaGabrielZarpelon
                             conta.data = DateTime.Now;
                             movimentacao.valor = conta.saldo;
                             conta.Movimentacao.Add(movimentacao);
-                            BancoDados.Cadastro(conta);
+                            BancoDados.Cadastro(conta, movimentacao);
                             Console.WriteLine("Conta cadastrada");
                         }
                         else
