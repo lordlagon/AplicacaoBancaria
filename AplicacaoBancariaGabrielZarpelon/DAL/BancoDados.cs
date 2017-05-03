@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using AplicacaoBancariaGabrielZarpelon.Model;
 using MySql.Data.MySqlClient;
 
-namespace AplicacaoBancariaGabrielZarpelon.Controller
+namespace AplicacaoBancariaGabrielZarpelon.DAL
 {
     class BancoDados
     {

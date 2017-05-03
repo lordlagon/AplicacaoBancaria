@@ -51,7 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controller\BancoDados.cs" />
+    <Compile Include="DAL\BancoDados.cs" />
     <Compile Include="Controller\DepositoSaque.cs" />
     <Compile Include="DAL\ContaDAO.cs" />
     <Compile Include="DAL\MovimentacaoDAO.cs" />
