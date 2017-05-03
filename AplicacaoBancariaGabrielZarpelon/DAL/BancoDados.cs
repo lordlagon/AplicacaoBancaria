@@ -31,7 +31,7 @@ namespace AplicacaoBancariaGabrielZarpelon.DAL
             Conexao = new MySqlConnection(caminho);
             Conexao.Open();
             string alterarFK = "ALTER TABLE app_banco.movimentacao ADD primary key (Id_movimentacao,Id_conta); " +
-                                "ALTER TABLE app_banco.movimentacao ADD foreign key (Id_conta)references conta(ID_conta); ";
+                               "ALTER TABLE app_banco.movimentacao ADD foreign key (Id_conta)references conta(ID_conta); ";
             comandos = new MySqlCommand(alterarFK, Conexao);
             comandos.ExecuteNonQuery();
             Conexao.Close();
